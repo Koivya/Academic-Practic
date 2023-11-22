@@ -33,7 +33,7 @@ namespace PracticalWork8
 
                 while (true)
                 {
-                    Thread.Sleep(1000);
+                    Thread.Sleep(1500);
                     
                     Console.WriteLine("Выберите действие.");
                     Console.WriteLine("1. Погода в городе.");
@@ -72,7 +72,7 @@ namespace PracticalWork8
                             break;
                         }
                     }
-                    Thread.Sleep(1000);
+                    Thread.Sleep(1500);
                 }
                 
                 static int GetChoice()
@@ -129,28 +129,32 @@ namespace PracticalWork8
 
                 static void RemoveDefaultCityWeather(List<DefaultCity> defaultCityList)
                 {
-                    for (int i = 0; i < defaultCityList.Count; i++)
-                    {
-                        defaultCityList.RemoveAt(i);
-                    }
+                    defaultCityList.Clear();
                     Console.WriteLine("Город по умолчанию удалён.\n");
                 }
 
                 static async Task ViewDefaultCityWeather(List<DefaultCity> defaultCityList)
                 {
-                    DefaultCity item = defaultCityList[0];
-                    string city = item.City;
-                    
-                    string apiKey = "8f0f93c71d748997cc904ac27419799f";
-                    string apiResponse = await GetWeather(city, apiKey);
+                    if (defaultCityList.Count > 0)
+                    {
+                        DefaultCity item = defaultCityList[0];
+                        string city = item.City;
 
-                    dynamic weatherData = JsonConvert.DeserializeObject(apiResponse);
-            
-                    string description = weatherData.weather[0].description;
-                    double temp = weatherData.main.temp - 273.15;
-            
-                    Console.WriteLine("Погода в городе по умолчанию:");
-                    Console.WriteLine($"{city}: {description}. Температура: {temp}°C.\n");
+                        string apiKey = "8f0f93c71d748997cc904ac27419799f";
+                        string apiResponse = await GetWeather(city, apiKey);
+
+                        dynamic weatherData = JsonConvert.DeserializeObject(apiResponse);
+
+                        string description = weatherData.weather[0].description;
+                        double temp = weatherData.main.temp - 273.15;
+
+                        Console.WriteLine("Погода в городе по умолчанию:");
+                        Console.WriteLine($"{city}: {description}. Температура: {temp}°C.\n");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Нет заданного города по умолчанию.\n");
+                    }
                 }
             }
             catch (Exception e)
@@ -167,9 +171,16 @@ namespace PracticalWork8
 
             response.EnsureSuccessStatusCode();
 
-            string responseBody = await response.Content.ReadAsStringAsync();
+            if (response.IsSuccessStatusCode)
+            {
+                string responseBody = await response.Content.ReadAsStringAsync();
 
-            return responseBody;
+                return responseBody;
+            }
+            else
+            {
+                throw new Exception($"Ошибка при получении данных о погоде: {response.StatusCode}");
+            }
         }
     }
 
