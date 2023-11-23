@@ -141,7 +141,7 @@ namespace PracticalWork7
                     }
                     else
                     {
-                        Console.WriteLine("Некорректный дата. Задача не добавлена.\n");
+                        Console.WriteLine("Некорректная дата. Задача не добавлена.\n");
                     }
                 }
 
