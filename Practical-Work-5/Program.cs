@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-
-namespace PracticalWork5
+﻿namespace Practical_Work_5
 {
     internal class Program
     {
         public static void Main(string[] args)
         {
-            /*//Задание №1
             try
             {
+                /*//Задание №1
                 string path = "numsTask1.txt";
 
                 string numbersFromFile;
@@ -22,13 +18,12 @@ namespace PracticalWork5
                 char[] separators = { ' ', ',', '.', '?', '!', '\n', '\t', '\r', ';', ':' };
                 string[] stringNumbers = numbersFromFile.Split(separators, StringSplitOptions.RemoveEmptyEntries);
 
-                List<short> numbers = new List<short>();
+                List<int> numbers = new List<int>();
 
                 Console.WriteLine("Массив чисел, взятых из файла:");
                 for (int i = 0; i < stringNumbers.Length; i++)
                 {
-                    short number;
-                    if (short.TryParse(stringNumbers[i], out number))
+                    if (int.TryParse(stringNumbers[i], out int number))
                     {
                         numbers.Add(number);
                         Console.Write(number + " ");
@@ -41,38 +36,31 @@ namespace PracticalWork5
 
                 Console.WriteLine();
 
-                short minNumber = numbers[0];
-                short minIndex = 0;
+                int minNumber = numbers[0];
+                int minIndex = 0;
 
                 for (int i = 0; i < numbers.Count; i++)
                 {
                     if (numbers[i] < minNumber)
                     {
                         minNumber = numbers[i];
-                        minIndex = (short)i;
+                        minIndex = i;
                     }
                 }
 
                 Console.WriteLine("\nМинимальное число в массиве: " + minNumber);
-                Console.WriteLine("Индекс минимального числа: " + minIndex);
+                Console.WriteLine("Номер минимального числа: " + (minIndex + 1));
 
-                ulong product = 1;
+                float product = 1;
                 for (int i = minIndex + 1; i < numbers.Count; i++)
                 {
-                    product *= (ulong)numbers[i];
+                    product *= numbers[i];
                 }
 
-                Console.WriteLine("\nПроизведение чисел, расположенных после минимального: " + product);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }*/
+                Console.WriteLine("\nПроизведение чисел, расположенных после минимального: " + product);*/
 
 
-            /*//Задание №2
-            try
-            {
+                /*//Задание №2
                 string path = "numsTask2.txt";
 
                 string numbersFromFile;
@@ -81,7 +69,6 @@ namespace PracticalWork5
                     numbersFromFile = reader.ReadToEnd();
                 }
 
-                //по заданию числа расположены через ';'
                 char[] separators = { ' ', '\n', '\t', '\r', ';' };
                 string[] stringNumbers = numbersFromFile.Split(separators, StringSplitOptions.RemoveEmptyEntries);
 
@@ -121,17 +108,10 @@ namespace PracticalWork5
                     writer.WriteLine(newNumbers);
                 }
 
-                Console.WriteLine("\nОтсортированная последовательность чисел перезаписана в файл");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }*/
+                Console.WriteLine("\nОтсортированная последовательность чисел перезаписана в файл");*/
 
 
-            /*//Задание №3
-            try
-            {
+                /*//Задание №3
                 string path = "numsTask3.txt";
 
                 string numbersFromFile;
@@ -175,7 +155,7 @@ namespace PracticalWork5
                 }
 
                 Console.WriteLine("\nМинимальное число в массиве: " + minNumber);
-                Console.WriteLine("Индекс минимального числа: " + minIndex);
+                Console.WriteLine("Номер минимального числа: " + (minIndex + 1));
 
                 float sum = 0;
                 for (int i = 0; i < minIndex + 1; i++)
@@ -184,17 +164,10 @@ namespace PracticalWork5
                 }
 
                 float average = sum / (minIndex + 1);
-                Console.WriteLine("\nСреднее арифметическое элементов до минимального: " + Math.Round(average, 2));
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }*/
+                Console.WriteLine("\nСреднее арифметическое элементов до минимального: " + Math.Round(average, 2));*/
 
 
-            /*//Задание №4
-            try
-            {
+                /*//Задание №4
                 string path = "numsTask4.txt";
 
                 string numbersFromFile;
@@ -245,17 +218,10 @@ namespace PracticalWork5
                     }
                 }
 
-                Console.WriteLine("\nСумма чисел, отличающихся от максимального на 1: " + sum);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }*/
+                Console.WriteLine("\nСумма чисел, отличающихся от максимального на 1: " + sum);*/
 
 
-            /*//Задание №5
-            try
-            {
+                /*//Задание №5
                 string path = "numsTask5.txt";
 
                 string numbersFromFile;
@@ -267,13 +233,12 @@ namespace PracticalWork5
                 char[] separators = { ' ', ',', '.', '?', '!', '\n', '\t', '\r', ';', ':' };
                 string[] stringNumbers = numbersFromFile.Split(separators, StringSplitOptions.RemoveEmptyEntries);
 
-                List<short> numbers = new List<short>();
+                List<int> numbers = new List<int>();
 
                 Console.WriteLine("Массив целых чисел, взятых из файла:");
                 for (int i = 0; i < stringNumbers.Length; i++)
                 {
-                    short number;
-                    if (short.TryParse(stringNumbers[i], out number))
+                    if (int.TryParse(stringNumbers[i], out int number))
                     {
                         numbers.Add(number);
                         Console.Write(number + "  ");
@@ -286,32 +251,32 @@ namespace PracticalWork5
 
                 Console.WriteLine();
 
-                short maxNumber = numbers[0];
-                short maxIndex = 0;
+                int maxNumber = numbers[0];
+                int maxIndex = 0;
 
-                short minNumber = numbers[0];
-                short minIndex = 0;
+                int minNumber = numbers[0];
+                int minIndex = 0;
 
                 for (int i = 0; i < numbers.Count; i++)
                 {
                     if (numbers[i] > maxNumber)
                     {
                         maxNumber = numbers[i];
-                        maxIndex = (byte)i;
+                        maxIndex = i;
                     }
 
                     if (numbers[i] < minNumber)
                     {
                         minNumber = numbers[i];
-                        minIndex = (byte)i;
+                        minIndex = i;
                     }
                 }
 
                 Console.WriteLine("\nМинимальное число в массиве: " + minNumber);
-                Console.WriteLine("Индекс минимального числа: " + minIndex);
+                Console.WriteLine("Номер минимального числа: " + (minIndex + 1));
 
                 Console.WriteLine("\nМаксимальное число в массиве: " + maxNumber);
-                Console.WriteLine("Индекс максимального числа: " + maxIndex);
+                Console.WriteLine("Индекс максимального числа: " + (maxIndex + 1));
 
                 if (maxIndex - minIndex > 1)
                 {
@@ -327,12 +292,12 @@ namespace PracticalWork5
                 else
                 {
                     Console.WriteLine("\nМежду минимальным и максимальным числом нет чисел");
-                }
+                }*/
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
-            }*/
+            }
         }
     }
 }

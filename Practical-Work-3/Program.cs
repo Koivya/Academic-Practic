@@ -1,20 +1,17 @@
-﻿using System;
-using System.IO;
-using System.Text;
-using System.Linq;
-using System.Collections.Generic;
+﻿using System.Text;
 
-namespace PracticalWork3
+namespace Practical_Work_3
 {
     internal class Program
     {
         public static void Main(string[] args)
         {
-            /*//Задание №1
-            string inputPath = "input.txt";
-            string outputPath = "output.txt";
             try
             {
+                /*//Задание №1
+                string inputPath = "input.txt";
+                string outputPath = "output.txt";
+
                 string[] lines = File.ReadAllLines(inputPath);
                 int[] winningNumbers = lines[0].Split(' ').Select(int.Parse).ToArray();
                 int n = int.Parse(lines[1]);
@@ -42,19 +39,12 @@ namespace PracticalWork3
 
                         writer.WriteLine(result);
                     }
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }*/
+                }*/
 
 
-            /*//Задание №2
-            string path = "nums.txt";
+                /*//Задание №2
+                string path = "nums.txt";
 
-            try
-            {
                 string numbersLine;
                 using (StreamReader sr = new StreamReader(path, Encoding.Default))
                 {
@@ -80,19 +70,12 @@ namespace PracticalWork3
                 {
                     string newNumbers = string.Join(" ", oddNumbers);
                     writer.WriteLine(newNumbers);
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }*/
+                }*/
 
 
-            /*//Задание №3
-            string path = "numbers.txt";
+                /*//Задание №3
+                string path = "numbers.txt";
 
-            try
-            {
                 string[] numbersLine;
                 using (StreamReader reader = new StreamReader(path, Encoding.Default))
                 {
@@ -132,12 +115,12 @@ namespace PracticalWork3
                 using (StreamWriter writer = new StreamWriter(path, true))
                 {
                     writer.WriteLine("\n" + result);
-                }
+                }*/
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
-            }*/
+            }
         }
     }
 }
