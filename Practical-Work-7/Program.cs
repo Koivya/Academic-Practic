@@ -3,7 +3,7 @@ using System.IO;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace PracticalWork7
+namespace Practical_Work_7
 {
     class Program
     {
