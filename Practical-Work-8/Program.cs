@@ -6,7 +6,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Threading;
 
-namespace PracticalWork8
+namespace Practical_Work_8
 {
     class Program
     {
