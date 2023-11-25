@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.IO;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace Practical_Work_7
+namespace PracticalWork7
 {
     class Program
     {
@@ -141,7 +141,7 @@ namespace Practical_Work_7
                     }
                     else
                     {
-                        Console.WriteLine("Некорректная дата. Задача не добавлена.\n");
+                        Console.WriteLine("Некорректный дата. Задача не добавлена.\n");
                     }
                 }
 
