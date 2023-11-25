@@ -1,4 +1,4 @@
-﻿namespace Practical_Work_2
+namespace Practical_Work_2
 {
     internal class Program
     {
@@ -172,7 +172,7 @@
                 }*/
 
 
-                //Задание №5
+                /*//Задание №5
                 Dictionary<string, short[]> temperatureDictionary = new Dictionary<string, short[]>();
     
                 List<string> months = new List<string>
@@ -184,13 +184,13 @@
                 short numberDays = 30;
     
                 Random random = new Random();
-    
+
                 for (int i = 0; i < months.Count; i++)
                 {
                     short[] numbers = new short[numberDays];
                     for (int j = 0; j < numberDays; j++)
                     {
-                        numbers[j] = (short)(random.Next(-15, 21));
+                        numbers[j] = (short)random.Next(-15, 21);
                     }
     
                     temperatureDictionary.Add(months[i], numbers);
@@ -238,7 +238,7 @@
                     }
     
                     return result;
-                }
+                }*/
             }
             catch (Exception ex)
             {
