@@ -1,4 +1,4 @@
-﻿namespace Practical_Work_1
+namespace Practical_Work_1
 {
     internal class Program
     {
