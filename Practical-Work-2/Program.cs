@@ -172,27 +172,18 @@
                 }*/
 
 
-                /*//Задание №5
+                //Задание №5
                 Dictionary<string, short[]> temperatureDictionary = new Dictionary<string, short[]>();
     
-                List<string> months = new List<string>()
+                List<string> months = new List<string>
                 {
                     "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
                     "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"
                 };
     
                 short numberDays = 30;
-                short[,] temperature = new short[months.Count, numberDays];
     
                 Random random = new Random();
-    
-                for (int i = 0; i < months.Count; i++)
-                {
-                    for (int j = 0; j < numberDays; j++)
-                    {
-                        temperature[i, j] = (short)random.Next(-15, 21);
-                    }
-                }
     
                 for (int i = 0; i < months.Count; i++)
                 {
@@ -205,19 +196,17 @@
                     temperatureDictionary.Add(months[i], numbers);
                 }
     
-                short[] monthTemperature;
-                for (int i = 0; i < months.Count; i++)
+                foreach (var month in temperatureDictionary)
                 {
-                    monthTemperature = temperatureDictionary[months[i]];
-                    Console.WriteLine($"Температура за {months[i]}:");
-                    for (int j = 0; j < monthTemperature.Length; j++)
+                    Console.WriteLine($"Температура за {month.Key}:");
+                    for (int j = 0; j < numberDays; j++)
                     {
                         if (j == 6 || j == 12 || j == 18 || j == 24)
                         {
                             Console.WriteLine();
                         }
     
-                        Console.Write("{0, 5}", monthTemperature[j]);
+                        Console.Write("{0, 5}", month.Value[j]);
                     }
     
                     Console.WriteLine("\n");
@@ -249,7 +238,7 @@
                     }
     
                     return result;
-                }*/
+                }
             }
             catch (Exception ex)
             {
