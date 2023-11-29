@@ -61,11 +61,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\k0val\\RiderProjects\\Academic-Practic\\Practical-Work-8\\Practical-Work-8.csproj",
+      "projectUniqueName": "C:\\Users\\k0val\\RiderProjects\\Training-Practic\\Practical-Work-8\\Practical-Work-8.csproj",
       "projectName": "Practical-Work-8",
-      "projectPath": "C:\\Users\\k0val\\RiderProjects\\Academic-Practic\\Practical-Work-8\\Practical-Work-8.csproj",
+      "projectPath": "C:\\Users\\k0val\\RiderProjects\\Training-Practic\\Practical-Work-8\\Practical-Work-8.csproj",
       "packagesPath": "C:\\Users\\k0val\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\k0val\\RiderProjects\\Academic-Practic\\Practical-Work-8\\obj\\",
+      "outputPath": "C:\\Users\\k0val\\RiderProjects\\Training-Practic\\Practical-Work-8\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
