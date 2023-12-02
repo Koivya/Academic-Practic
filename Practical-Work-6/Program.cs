@@ -6,8 +6,6 @@ namespace Practical_Work_6
     {
         public static void Main(string[] args)
         {
-            try
-            { 
                 /*//Задание №1
                 string path = "numsTask1.txt";
             
@@ -231,11 +229,6 @@ namespace Practical_Work_6
                 {
                     Console.Write(number + " ");
                 }*/
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
         }
     }
 }
