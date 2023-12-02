@@ -4,8 +4,6 @@ namespace Practical_Work_5
     {
         public static void Main(string[] args)
         {
-            try
-            {
                 /*//Задание №1
                 string path = "numsTask1.txt";
 
@@ -293,11 +291,6 @@ namespace Practical_Work_5
                 {
                     Console.WriteLine("\nМежду минимальным и максимальным числом нет чисел");
                 }*/
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
         }
     }
 }
