@@ -6,8 +6,6 @@ namespace Practical_Work_3
     {
         public static void Main(string[] args)
         {
-            try
-            {
                 /*//Задание №1
                 string inputPath = "input.txt";
                 string outputPath = "output.txt";
@@ -116,11 +114,6 @@ namespace Practical_Work_3
                 {
                     writer.WriteLine("\n" + result);
                 }*/
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
         }
     }
 }
