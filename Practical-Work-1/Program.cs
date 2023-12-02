@@ -4,8 +4,6 @@ namespace Practical_Work_1
     {
         public static void Main(string[] args)
         {
-            try
-            {
                 //Задание №1
                 /*short size = 10;
                 List<short> numbers = new List<short>();
@@ -210,13 +208,9 @@ namespace Practical_Work_1
                     
                     string[] wordsFromText = someText.Split(separators, StringSplitOptions.RemoveEmptyEntries);
                     
-                    return wordsFromText.Length;
-                }*/
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+                return wordsFromText.Length;
+            }*/
+           } 
         }
     }
 }
