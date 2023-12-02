@@ -4,8 +4,6 @@ namespace Practical_Work_2
     {
         public static void Main(string[] args)
         {
-            try
-            {
                 /*//Задание №1
                 byte size = 100;
                 List<short> numbers = new List<short>();
@@ -239,10 +237,6 @@ namespace Practical_Work_2
     
                     return result;
                 }*/
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
             }
         }
     }
