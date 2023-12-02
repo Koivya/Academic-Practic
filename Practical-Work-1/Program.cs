@@ -209,8 +209,7 @@ namespace Practical_Work_1
                     string[] wordsFromText = someText.Split(separators, StringSplitOptions.RemoveEmptyEntries);
                     
                 return wordsFromText.Length;
-            }*/
-           } 
+                }*/
         }
     }
 }
