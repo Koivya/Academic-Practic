@@ -237,7 +237,6 @@ namespace Practical_Work_2
     
                     return result;
                 }*/
-            }
         }
     }
 }
