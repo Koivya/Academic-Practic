@@ -4,8 +4,6 @@ namespace Practical_Work_4
     {
         public static void Main(string[] args)
         {
-            try
-            {
                 /*//Задание №1
                 while (true)
                 {
@@ -238,11 +236,6 @@ namespace Practical_Work_4
                         Console.WriteLine("Некорректный ввод. Попробуйте снова.\n");
                     }
                 }*/
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
         }
     }
 }
