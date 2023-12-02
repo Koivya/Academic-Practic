@@ -9,8 +9,6 @@ namespace PracticalWork7
     {
         public static void Main(string[] args)
         {
-            try
-            {
                 string diaryFilePath = "diary.json";
                 List<DiaryItems> diaryItemsList;
 
@@ -318,11 +316,6 @@ namespace PracticalWork7
                         Console.WriteLine("Нет выполненных задач.\n");
                     }
                 }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
         }
     }
 
@@ -332,4 +325,4 @@ namespace PracticalWork7
         public string Description { get; set; }
         public DateTime DueDate { get; set; }
     }
-}
+} 
